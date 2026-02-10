@@ -59,10 +59,11 @@ npm run build
 - Configure CORS origins in `backend/main.py` to match your deployed frontend URL(s).
 - 
 # Frontend Setup
+```
 cd ../frontend
 npm install
 npm run dev
-
+```
 ## 🔗 Environment Configuration
 Frontend
 
@@ -79,6 +80,7 @@ ADZUNA_APP_ID=
 ADZUNA_APP_KEY=
 
 ## 📁 Project Structure
+```
 smartcv-job-finder/
 ├── backend/
 │   ├── main.py
@@ -88,7 +90,7 @@ smartcv-job-finder/
     ├── src/
     ├── package.json
     └── .env.example
-
+```
 ## 🎯 How It Works
 
 User submits CV text.
