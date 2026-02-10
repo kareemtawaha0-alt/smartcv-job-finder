@@ -1,0 +1,32 @@
+John Doe
+Senior Software Engineer
+
+Email: john.doe@example.com
+Location: Remote / London, UK
+
+Summary
+-------
+Experienced software engineer with 7+ years of experience building backend services and APIs in Python and Node.js. Passionate about clean architecture, mentoring, and delivering business value.
+
+Skills
+------
+- Languages: Python, JavaScript/TypeScript, SQL
+- Frameworks: FastAPI, Django, React, Node.js, Express
+- Cloud: AWS (Lambda, ECS, RDS), Docker, CI/CD
+- Databases: PostgreSQL, MySQL, Redis
+- Practices: TDD, code review, distributed systems
+
+Experience
+----------
+Senior Backend Engineer – Acme Corp – 2020–Present
+- Designed and implemented microservices in FastAPI and Node.js
+- Led technical design reviews and mentored 3 engineers
+- Improved API latency by 35% by optimizing database access patterns
+
+Software Engineer – BetaTech – 2017–2020
+- Built REST APIs used by web and mobile clients
+- Maintained CI/CD pipelines and monitoring dashboards
+
+Education
+---------
+BSc Computer Science – University of Example – 2017

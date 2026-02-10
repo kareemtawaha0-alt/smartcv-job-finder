@@ -1,0 +1,29 @@
+Sara Ahmed
+Data Analyst / BI Specialist
+
+Email: sara.ahmed@example.com
+Location: Dubai, UAE
+
+Profile
+-------
+Detail-oriented data analyst with 4+ years of experience converting business questions into dashboards and insights. Strong SQL, Python, and visualization skills.
+
+Skills
+------
+- Tools: Power BI, Tableau, Looker Studio
+- Languages: Python (pandas, numpy), SQL
+- Databases: BigQuery, Snowflake, PostgreSQL
+- Other: A/B testing, statistics, stakeholder communication
+
+Experience
+----------
+Data Analyst – Insight Labs – 2021–Present
+- Built interactive dashboards for sales and marketing teams
+- Automated weekly reporting using Python and SQL
+
+Junior BI Engineer – MetricsX – 2019–2021
+- Created ETL scripts and maintained BI data models
+
+Education
+---------
+BSc Information Systems – Example University – 2019
