@@ -79,7 +79,8 @@ ADZUNA_APP_ID=
 ADZUNA_APP_KEY=
 
 ## 📁 Project Structure
-smartcv-job-finder/
+smartcv-job-finder
+/
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
