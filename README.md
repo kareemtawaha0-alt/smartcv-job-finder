@@ -1,108 +1,54 @@
-# SmartCV Job Finder
+# SmartCV Job Finder - CV Analysis & Job Search Platform
+A web application that analyzes a CV (resume) and automatically searches for relevant job opportunities based on the extracted insights. Built with FastAPI (Python) + Vite (frontend) and integrates multiple free public job sources (no paid AI required).
 
-SmartCV Job Finder is a full-stack web application that lets users upload their CV, analyze their skills using OpenAI, and search for matching jobs from online job boards.
+## 🚀 Live Demo
+Frontend (Netlify): https://YOUR-FRONTEND-URL.netlify.app  
+Backend API: https://YOUR-BACKEND-URL
 
-## Project Structure
+## ✨ Features
 
-- `frontend/` – React + Vite + TailwindCSS single-page app
-- `backend/` – FastAPI backend with CV parsing, AI analysis, and job search
-- `sample_cvs/` – Example CVs for testing
+### 🧠 CV Analysis (No OpenAI Required)
+- Extracts suggested job titles
+- Extracts skills
+- Estimates experience level
+- Generates a short summary
+- Works without any API keys by default
 
-## Prerequisites
+### 🔎 Job Search (Step 3) Based on the Analysis
+- Automatically searches jobs using the CV analysis result
+- Uses free public job APIs:
+  - Remotive
+  - Remote OK
+  - Arbeitnow
+- Merges results and removes duplicates
+- Optional Adzuna support if you provide your own API keys
 
-- Node.js (LTS recommended)
+### 🎨 Modern UI
+- Clean and simple user interface
+- Responsive layout
+- Loading states and user feedback
+
+## 🧱 Tech Stack
+- Backend: Python + FastAPI
+- Frontend: Vite + JavaScript
+- Job APIs: Remotive, Remote OK, Arbeitnow (+ optional Adzuna)
+- No database required
+
+## 📦 Installation
+
+### Prerequisites
 - Python 3.10+
-- An OpenAI API key
-- (Optional but recommended) Adzuna job search API credentials
+- Node.js 18+
+- npm
 
----
+## ⚙️ Quick Start (Local)
 
-## Backend Setup
-
+### Backend Setup
 ```bash
 cd backend
-python -m venv .venv
-source .venv/bin/activate  # on Windows: .venv\Scripts\activate
-
 pip install -r requirements.txt
-```
+uvicorn main:app --reload
 
-Create a `.env` file in `backend/` based on `.env.example`:
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` and fill in:
-
-- `HF_TOKEN (optional): Hugging Face token. If omitted, rule-based fallback is used.
-- Optional Adzuna settings for live job search:
-  - `ADZUNA_APP_ID`
-  - `ADZUNA_APP_KEY`
-  - `ADZUNA_COUNTRY` (e.g. `gb`, `us`, `ae`)
-  - `DEFAULT_JOB_LOCATION` (fallback location, e.g. `Remote`)
-
-Run the backend:
-
-```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
-```
-
-The FastAPI docs will be available at: `http://localhost:8000/docs`.
-
----
-
-## Frontend Setup
-
-```bash
-cd frontend
-npm install
-```
-
-Create a `.env` file in `frontend/` based on `.env.example`:
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` and set:
-
-```bash
-VITE_API_BASE_URL="http://localhost:8000"
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-The app will be available (by default) at `http://localhost:5173`.
-
----
-
-## Flow
-
-1. Upload a CV (PDF or DOCX, simple text also supported).
-2. The backend:
-   - Extracts text.
-   - Calls OpenAI to analyze job titles, skills, experience, and recommended job types.
-   - Uses that to query the Adzuna jobs API (if configured) and returns matching jobs.
-   - Falls back to mocked job results if no external job API is configured.
-3. The frontend displays a modern results table with:
-   - Job Title
-   - Company
-   - Location
-   - Short description
-   - Link to apply
-
-The system **never** auto-applies; it only shows links.
-
----
-
-## Production Notes
-
-- You can deploy the backend to any Python-friendly host (e.g. Docker, cloud VM, etc.).
 - You can build the frontend with:
 
 ```bash
@@ -111,4 +57,52 @@ npm run build
 ```
 
 - Configure CORS origins in `backend/main.py` to match your deployed frontend URL(s).
+- 
+# Frontend Setup
+cd ../frontend
+npm install
+npm run dev
+
+## 🔗 Environment Configuration
+Frontend
+
+Set inside frontend/.env.example (or frontend/.env locally, do not commit it):
+
+VITE_API_BASE_URL=http://127.0.0.1:8000
+
+Backend (Optional)
+
+The backend works without keys.
+Optional (Adzuna only):
+
+ADZUNA_APP_ID=
+ADZUNA_APP_KEY=
+
+## 📁 Project Structure
+smartcv-job-finder/
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .env.example
+└── frontend/
+    ├── src/
+    ├── package.json
+    └── .env.example
+
+## 🎯 How It Works
+
+User submits CV text.
+
+Backend analyzes the CV and extracts job titles, skills and experience level.
+
+Backend builds keywords from the analysis.
+
+Backend searches jobs from Remotive, Remote OK and Arbeitnow.
+
+Results are merged and returned to the frontend.
+
+
+**Built with ❤️ for professional, trustworthy agreements**
+
+    
 
