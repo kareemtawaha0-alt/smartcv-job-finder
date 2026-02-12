@@ -1,9 +1,6 @@
 # SmartCV Job Finder - CV Analysis & Job Search Platform
 A web application that analyzes a CV (resume) and automatically searches for relevant job opportunities based on the extracted insights. Built with FastAPI (Python) + Vite (frontend) and integrates multiple free public job sources (no paid AI required).
 
-## 🚀 Live Demo
-Frontend (Netlify): https://YOUR-FRONTEND-URL.netlify.app  
-Backend API: https://YOUR-BACKEND-URL
 
 ## ✨ Features
 
